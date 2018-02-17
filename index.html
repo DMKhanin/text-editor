@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Text Editor Online</title>
+	<script src="js/script.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+<body onload="ready()">
+	<nav>
+		<div class="logotype"></div>
+		<!--<a href="#">LOGIN</a>-->
+		<a href="#" class="download"><i class="fas fa-cloud-download-alt" style="padding-right: 5px;"></i> DOWNLOAD</a>
+	</nav>
+	<div id="h-menu" class="animate">
+		<button id="bold"><i class="fas fa-bold"></i></button>
+		<button id="italic"><i class="fas fa-italic"></i></button>
+		<button id="underline"><i class="fas fa-underline"></i></button>
+		<button id="strong"><i class="fas fa-strikethrough"></i></button>
+		<button id="upindex"><i class="fas fa-superscript"></i></button>
+		<button id="downindex"><i class="fas fa-subscript"></i></button>
+	</div>
+	<div class="wrapper">
+		<div>
+			<p id="document" contentEditable="true">
+			</p>
+		</div>
+	</div>
+</body>
+</html>

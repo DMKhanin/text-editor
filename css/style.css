@@ -1,0 +1,157 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	font-family: "Myriad Pro"
+}
+.wrapper{
+	width: 1000px;
+	margin: 20px auto;
+}
+#document{
+	font-family: "Segoe UI";
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	-webkit-box-shadow: 0 0 10px rgba(247, 133, 133, 0.1);
+	        box-shadow: 0 0 10px rgba(247, 133, 133, 0.1);
+	min-height: 300px;
+	line-height: 16px;
+	font-size: 14px;
+}
+.bold{
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.underline{
+	text-decoration: underline;
+}
+
+.strong{
+	text-decoration: line-through;
+}
+/*MENU STYLES*/
+nav{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	background-color: #10213B;
+	height: 50px;
+}
+nav > .download{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	margin: 5px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 10px;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #192942;
+	width: 135px;
+	height: 35px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-transition: all ease-in-out 0.1s;
+	transition: all ease-in-out 0.1s;
+}
+nav > .download:hover{
+	background-color: #fff;
+	color: #192942;
+	-webkit-transition: all ease-in-out 0.1s;
+	transition: all ease-in-out 0.1s;
+}
+#h-menu{
+	display: none;
+	position: absolute;
+	background-color: #192740;
+	width: 230px;
+	-webkit-transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.2s;
+}
+#h-menu > button{
+	cursor: pointer;
+	margin: 2px;
+	width: 30px;
+	height: 30px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background-color: #192942;
+	border-radius: 3px;
+	border: none;
+	color: #fff;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	-webkit-transition: all ease-in-out 0.1s;
+	transition: all ease-in-out 0.1s;	
+	
+}
+#h-menu > button:hover{
+	background-color: #fff;
+	color: #192942;
+	-webkit-transition: all ease-in-out 0.1s;
+	transition: all ease-in-out 0.1s;
+}
+.show-animate{
+	animation: 0.5s showblock;
+	-webkit-animation: 0.5s showblock; 
+	-moz-animation: 0.5s showblock; 
+	-o-animation: 0.5s showblock; 
+}
+.hide-animate{
+	animation: 0.5s hideblock;
+	-webkit-animation: 0.5s hideblock; 
+	-moz-animation: 0.5s hideblock; 
+	-o-animation: 0.5s hideblock; 
+
+}
+@-webkit-keyframes showblock{
+	0%{
+		opacity: 0;
+		display: block;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes showblock{
+	0%{
+		display: block;
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes hideblock {
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+@keyframes hideblock {
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
