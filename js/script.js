@@ -30,6 +30,12 @@ function ready(){
 	var strongBtn = document.getElementById("strong");
 	var upIndexBtn = document.getElementById("upindex");
 	var downIndexBtn = document.getElementById("downindex");
+	var textLeftBtn = document.getElementById("textleft");
+	var textCenterBtn = document.getElementById("textcenter");
+	var textRightBtn = document.getElementById("textright");
+	var textJustifyBtn = document.getElementById("textjustify");
+	
+	
 	
 	var selectionObj = window.getSelection();
 	
@@ -58,12 +64,22 @@ function ready(){
 		var posY = Math.floor(e.clientY/lineHeight);
 		//alert(posY);
 		//alert(lineHeight*posY);
+
 		console.log("selange = " + selObj);
 		if (selObj!=""){
 			var hMenu = document.getElementById("h-menu");
 			hMenu.classList.remove("hide-animate");
 			hMenu.classList.add("show-animate");
-			hMenu.style.left = (clientRects[0].left + (clientRects[0].width/2) - 115) + "px";
+			var hMenuWidth = hMenu.childElementCount * (33 + 4) - 4;
+			var hMenuXPos = clientRects[0].left + (clientRects[0].width/2) - hMenuWidth/2;
+			if(hMenuXPos<0){
+				hMenuXPos = 10;
+			}
+			if(hMenuXPos+hMenuWidth>document.documentElement.clientWidth){
+				alert(true);
+				hMenuXPos = document.documentElement.clientWidth - hMenuWidth - 10;
+			}
+			hMenu.style.left = hMenuXPos + "px";
 			hMenu.style.top = (clientRects[0].y-50) + "px";
 			hMenu.style.display = "block";	
 		} else {
@@ -119,6 +135,21 @@ function ready(){
 		selectedFormat("subscript");
 	})
 	
+	textLeftBtn.addEventListener("click",function(){
+		selectedFormat("justifyLeft");	
+	})
+	
+	textCenterBtn.addEventListener("click",function(){
+		selectedFormat("justifyCenter");
+	})
+	
+	textRightBtn.addEventListener("click",function(){
+		selectedFormat("justifyRight");
+	})
+	
+	textJustifyBtn.addEventListener("click",function(){
+		selectedFormat("justifyFull");
+	})
 	document.addEventListener("keydown",function(e){
 		console.log(e.keyCode);
 		/*if (e.keyCode > 32){
